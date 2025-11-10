@@ -102,11 +102,26 @@ Add this server to your Claude Desktop config:
   "mcpServers": {
     "capital-check-in": {
       "command": "node",
-      "args": ["/absolute/path/to/capital-check-in-mcp/build/index.js"]
+      "args": ["/Users/ivansotelo/Documents/CapitalCheckIn/capital-check-in-mcp/build/index.js"]
     }
   }
 }
 ```
+
+**Note:** Replace the path with your actual absolute path.
+
+## Configuration with Cursor
+
+To use this MCP server in Cursor IDE, see [CURSOR_SETUP.md](CURSOR_SETUP.md) for detailed instructions.
+
+Quick setup:
+1. Copy the configuration from `cursor_mcp_settings.json`
+2. Paste it into Cursor's MCP settings file
+3. Restart Cursor
+
+The configuration file is located at:
+- **macOS:** `~/Library/Application Support/Cursor/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`
+- **Windows:** `%APPDATA%\Cursor\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json`
 
 ## Project Structure
 

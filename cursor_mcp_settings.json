@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "capital-check-in": {
+      "command": "/opt/homebrew/bin/node",
+      "args": [
+        "/Users/ivansotelo/Documents/CapitalCheckIn/capital-check-in-mcp/build/index.js"
+      ]
+    }
+  }
+}

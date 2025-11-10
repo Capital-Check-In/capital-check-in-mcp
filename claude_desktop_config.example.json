@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "capital-check-in": {
+      "command": "node",
+      "args": [
+        "/absolute/path/to/capital-check-in-mcp/build/index.js"
+      ]
+    }
+  }
+}

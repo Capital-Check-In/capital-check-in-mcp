@@ -25,5 +25,17 @@
 
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
-  ]
+  ],
+
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+
+  "forwardPorts": [],
+  
+  "remoteEnv": {
+    "SSH_AUTH_SOCK": "${localEnv:SSH_AUTH_SOCK}"
+  }
 }

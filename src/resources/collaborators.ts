@@ -10,10 +10,7 @@ import { logger } from "../utils/logger.js";
 async function handler(uri: URL): Promise<ReadResourceResult> {
   // Extract query parameters
   const page = parseInt(uri.searchParams.get("page") || "1", 10);
-  const perPage = Math.min(
-    parseInt(uri.searchParams.get("per_page") || "10", 10),
-    100
-  );
+  const perPage = Math.min(parseInt(uri.searchParams.get("per_page") || "10", 10), 100);
   const status = uri.searchParams.get("status") || undefined;
   const department = uri.searchParams.get("department") || undefined;
   const search = uri.searchParams.get("search") || undefined;

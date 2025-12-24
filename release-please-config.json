@@ -4,7 +4,6 @@
         ".": {
             "changelog-path": "CHANGELOG.md",
             "release-type": "node",
-            "package-name": "capital-check-in-mcp",
             "version-file": "package.json",
             "pull-request-title-pattern": "chore: release ${version}",
             "pull-request-header": "🍄 Release bump",

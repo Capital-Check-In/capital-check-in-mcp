@@ -5,6 +5,9 @@
 
 import type { ResourceDefinition } from "../types/index.js";
 import { recentCheckInsResource } from "./recentCheckIns.js";
+import { collaboratorHistoryResource } from "./collaboratorHistory.js";
+import { collaboratorsResource } from "./collaborators.js";
+import { collaboratorByIdResource } from "./collaboratorById.js";
 
 /**
  * Array of all available resources
@@ -12,5 +15,8 @@ import { recentCheckInsResource } from "./recentCheckIns.js";
  */
 export const allResources: ResourceDefinition[] = [
   recentCheckInsResource,
+  collaboratorHistoryResource,
+  collaboratorsResource,
+  collaboratorByIdResource,
   // Add more resources here as you create them
 ];

@@ -1,0 +1,106 @@
+# Cursor Rules - Capital Check-In MCP
+
+## Conventional Commits
+
+Todos los mensajes de commit DEBEN seguir el formato de Conventional Commits para que release-please funcione correctamente.
+
+### Formato de Commits
+
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+### Tipos de Commits
+
+- `feat`: Nueva funcionalidad (incrementa versión MINOR)
+- `fix`: Corrección de bug (incrementa versión PATCH)
+- `docs`: Cambios en documentación (no incrementa versión)
+- `style`: Cambios de formato (no incrementa versión)
+- `refactor`: Refactorización de código (no incrementa versión)
+- `perf`: Mejoras de rendimiento (incrementa versión PATCH)
+- `test`: Agregar o modificar tests (no incrementa versión)
+- `chore`: Tareas de mantenimiento (no incrementa versión)
+- `build`: Cambios en sistema de build (no incrementa versión)
+- `ci`: Cambios en CI/CD (no incrementa versión)
+
+### Breaking Changes
+
+Para cambios que rompen compatibilidad, agrega `!` después del tipo:
+- `feat!`: Nueva funcionalidad con breaking change (incrementa versión MAJOR)
+- `fix!`: Fix con breaking change (incrementa versión MAJOR)
+
+### Ejemplos
+
+✅ **Correctos:**
+```
+feat: add collaborator resource endpoint
+fix: resolve authentication token expiration issue
+feat(tools): add new check-in validation
+fix(auth): handle expired tokens gracefully
+chore: update dependencies
+docs: add setup instructions for Cursor
+feat!: change API response format
+```
+
+❌ **Incorrectos:**
+```
+Add collaborator resource endpoint
+Fixed auth bug
+Update dependencies
+Changed API format
+```
+
+### Reglas Adicionales
+
+1. **Siempre usa inglés para los mensajes de commit** (aunque respondas en español)
+2. **El subject debe ser en minúsculas** (excepto nombres propios)
+3. **No termines el subject con punto**
+4. **Usa el modo imperativo** ("add" no "added" o "adds")
+5. **El subject debe tener máximo 72 caracteres**
+6. **El body es opcional pero recomendado para cambios complejos**
+7. **El scope es opcional** pero útil para indicar el área afectada (tools, resources, auth, etc.)
+
+### Scope Sugeridos
+
+- `tools`: Cambios en tools MCP
+- `resources`: Cambios en resources MCP
+- `auth`: Cambios en autenticación
+- `config`: Cambios en configuración
+- `deps`: Cambios en dependencias
+- `ci`: Cambios en CI/CD
+- `docs`: Cambios en documentación
+
+### Ejemplos con Scope
+
+```
+feat(tools): add collaborator search tool
+fix(resources): handle null values in check-in history
+chore(deps): update @modelcontextprotocol/sdk to 1.21.1
+docs(config): add Cursor setup instructions
+ci(release): update release-please workflow
+```
+
+## Código
+
+- Usa TypeScript con strict mode
+- Formatea con Prettier antes de commitear
+- Pasa ESLint antes de commitear
+- Usa nombres descriptivos para variables y funciones
+- Documenta funciones complejas con JSDoc
+
+## Estructura del Proyecto
+
+- `src/tools/`: Implementaciones de tools MCP
+- `src/resources/`: Implementaciones de resources MCP
+- `src/types/`: Definiciones de tipos compartidos
+- `src/utils/`: Utilidades compartidas
+
+## Testing
+
+- Usa `pnpm inspector` para probar el servidor MCP interactivamente
+- Verifica que los tools y resources funcionen correctamente antes de commitear
+

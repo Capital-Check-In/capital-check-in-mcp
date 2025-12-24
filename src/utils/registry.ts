@@ -26,17 +26,9 @@ export function registerTools(server: McpServer, tools: ToolDefinition[]): void 
  * @param server - The MCP server instance
  * @param resources - Array of resource definitions
  */
-export function registerResources(
-  server: McpServer,
-  resources: ResourceDefinition[]
-): void {
+export function registerResources(server: McpServer, resources: ResourceDefinition[]): void {
   for (const resource of resources) {
-    server.registerResource(
-      resource.name,
-      resource.uri,
-      resource.metadata,
-      resource.handler
-    );
+    server.registerResource(resource.name, resource.uri, resource.metadata, resource.handler);
     logger.info(`Registered resource: ${resource.name} (${resource.uri})`);
   }
 }

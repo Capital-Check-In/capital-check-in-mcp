@@ -4,6 +4,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { logger } from "./utils/logger.js";
 import { registerTools, registerResources } from "./utils/registry.js";
+import packageJson from "../package.json";
 
 // Import all tools and resources
 import { allTools } from "./tools/index.js";
@@ -15,9 +16,11 @@ import { allResources } from "./resources/index.js";
  * This server provides tools and resources for managing capital check-ins.
  */
 
+const { version } = packageJson;
+
 const server = new McpServer({
   name: "capital-check-in-mcp",
-  version: "0.1.0",
+  version,
   capabilities: {
     tools: {},
     resources: {},

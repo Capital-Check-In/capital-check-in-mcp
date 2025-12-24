@@ -8,6 +8,10 @@
   "bin": {
     "capital-check-in-mcp": "./build/index.js"
   },
+  "files": [
+    "build/**/*",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
